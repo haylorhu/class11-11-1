@@ -1,0 +1,44 @@
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.all{
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: linear-gradient(to right, #ffffff 1%,#ffffff 51%,#000000 51%,#000000 100%);
+    position: relative;    
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+div::before{
+    content: '';
+    height: 40px;
+    width: 40px;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    left: 100px;
+    border: 80px solid black;
+    
+}
+div::after{
+    content: '';
+    height: 40px;
+    width: 40px;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    background-color: black;
+    left: 100px;
+    top: 200px;
+    border: 80px solid white;
+}
